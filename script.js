@@ -1,17 +1,4 @@
-const form = document.getElementById('myForm');
+// // Cache at least one element using selectElementById in JavaScript
+const fullNameInput = document.getElementById('fullName');
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent form submission
-
-    const usernameInput = document.getElementById('username');
-    const username = usernameInput.value.trim();
-
-    if (username.length < 3) {
-        alert('Username must be at least 3 characters long.');
-        usernameInput.focus();
-    } else {
-        // Valid input: 
-        console.log('Valid username:', username);
-    }
-
-});
+console.log(fullNameInput)
