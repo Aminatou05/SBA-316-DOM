@@ -7,16 +7,12 @@ const allElements = document.querySelectorAll(".class");
 console.log(allElements);
 
 // Use the parent-child-sibling relationship to navigate between elements at least
-//  once (firstChild, lastChild, parentNode, nextElementSibling, etc.)
+//  once (firstChild, lastChild, parentNode, , etc.)
 // Cache the input element using querySelector
-const inputElement = document.querySelector("#username");
-const parentDiv = inputElement.parentNode;
-// Accessing the label element (sibling) of the input element
-const labelElement = inputElement.previousElementSibling;
-console.log("Input element:", inputElement);
-console.log("Parent div:", parentDiv);
-console.log("Label element:", labelElement);
+const usernameInput= document.querySelector(".user-input-box").nextElementSibling;
+console.log(usernameInput, 'You can move to the next nextElementSibling!');
 
+// const parentElement = usernameInput.parentElement;
 // array of elements of genderCategory
 const genderCategory = ["Male", "Female", "Other"];
 // Using a for loop to iterate over the elements
@@ -55,7 +51,7 @@ phoneNumInput.addEventListener("input", function () {
   document.body.appendChild(clone);
 
   const myBtn = document.getElementById('myBtn') 
-  myBtn.addEventListener("click",  function() {
+  myBtn.addEventListener("click",  function(event) {
     alert("Click me");
   })
 
