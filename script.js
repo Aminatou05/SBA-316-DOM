@@ -10,7 +10,7 @@ console.log(allElements);
 //  once (firstChild, lastChild, parentNode, , etc.)
 // Cache the input element using querySelector
 const usernameInput= document.querySelector(".user-input-box").nextElementSibling;
-console.log(usernameInput, 'You can move to the next nextElementSibling!');
+console.log( 'You can move to the  nextElementSibling!');
 
 // const parentElement = usernameInput.parentElement;
 // array of elements of genderCategory
@@ -26,25 +26,15 @@ container.appendChild(newDiv);
 
 // Modify the HTML or text content of at least one element in response
 // to user interaction using innerHTML, innerText, or textContent.
-const passwordInput = document.getElementById("password");
-const confirmPasswordInput = document.getElementById("confirmPassword");
+const confirmPasswordElem = document.getElementById("confirmPassword");
+confirmPasswordElem.innerHTML = "Please re-enter your password for confirmation:";
+console.log(confirmPasswordElem);
+//  The text content will be updated to “New Phone Number: 123-456-7894.”
+const phoneNumElem = document.getElementById("phoneNumber");
 
-passwordInput.addEventListener("input", () => {
-  // Update some other element based on password input
-  document.getElementById("message").innerText = "Password entered";
-  console.log(passwordInput);
+phoneNumElem.addEventListener("click", () => {
+    phoneNumElem.textContent = "New Phone Number: 123-456-7894";
 });
-
-const phoneNumInput = document.getElementById("phoneNumber");
-
-// Adding  an event listener for the 'input' event
-phoneNumInput.addEventListener("input", function () {
-  // Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties.
-  if (phoneNumInput.value.length > 10) {
-    phoneNumInput.style.backgroundColor = "red";
-  } else {
-    phoneNumInput.style.backgroundColor = "blue";
-  }
   // Use the DocumentFragment interface or HTML templating with the cloneNode method to create templated content.
   const template = document.getElementById("myTemplate");
   const clone = template.content.cloneNode(true);
@@ -55,5 +45,5 @@ phoneNumInput.addEventListener("input", function () {
     alert("Click me");
   })
 
-  
-});
+
+
