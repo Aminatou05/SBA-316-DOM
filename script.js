@@ -12,13 +12,19 @@ console.log(allElements);
 const usernameInput= document.querySelector(".user-input-box").nextElementSibling;
 console.log( 'You can move to the  nextElementSibling!');
 
-// const parentElement = usernameInput.parentElement;
-// array of elements of genderCategory
-const genderCategory = ["Male", "Female", "Other"];
-// Using a for loop to iterate over the elements
-for (let i = 0; i < genderCategory.length; i++) {
-  console.log(genderCategory[i]);
-}
+// Iterate over a collection of elements to accomplish some task.
+const allDivs = document.querySelectorAll('.container');
+allDivs.forEach(cTag => {
+    console.log(cTag);
+    cTag.style.backgroundColor = 'blue';
+})
+
+//  Keeping this code for future reference array of elements of genderCategory!!
+// const genderCategory = ["Male", "Female", "Other"];
+// // Using a for loop to iterate over the elements
+// for (let i = 0; i < genderCategory.length; i++) {
+//   console.log(genderCategory[i]);
+// }
 // Create at least one element using createElement.
 const container = document.querySelector(".user-input-box");
 const newDiv = document.createElement("div");
