@@ -16,9 +16,7 @@ console.log( 'You can move to the  nextElementSibling!');
 const allDivs = document.querySelectorAll('.container');
 allDivs.forEach(cTag => {
     console.log(cTag);
-    cTag.style.backgroundColor = 'blue';
-})
-
+});
 //  Keeping this code for future reference array of elements of genderCategory!!
 // const genderCategory = ["Male", "Female", "Other"];
 // // Using a for loop to iterate over the elements
@@ -46,10 +44,28 @@ phoneNumElem.addEventListener("click", () => {
   const clone = template.content.cloneNode(true);
   document.body.appendChild(clone);
 
-  const myBtn = document.getElementById('myBtn') 
-  myBtn.addEventListener("click",  function(event) {
-    alert("Click me");
-  })
+  // Register at least two different event 
+  // listeners and create the associated event handler functions.
+
+// Event handler function for "click" event
+function handle_click(event) {
+  console.log("Button clicked!");
+}
+// Event handler function for "mouseover" event
+function handle_mouseover(event) {
+  console.log("Mouse over the button!");
+  window.alert('click me!')
+}
+// Event listeners for my button
+const myBtn = document.getElementById("myBtn");
+myBtn.addEventListener("click", handle_click);
+myBtn.addEventListener("mouseover", handle_mouseover);
+
+// Use at least two Browser Object Model (BOM) properties or methods. not sure how to use this  Browser Object Model (BOM) 
+document.getElementById("demo").innerHTML = 
+"Page hostname is: " + window.location.hostname; // Not sure how apply this BOM properties here
+
+  
 
 
 

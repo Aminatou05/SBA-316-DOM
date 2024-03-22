@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Responsive Registration Form</title>
+    <title> Registration Form</title>
     <meta
       name="viewport"
       content="width=device-width,
@@ -16,19 +16,14 @@
       background-image: url("https://media.istockphoto.com/id/1675540912/photo/english-word-cards-on-wooden-table-in-class.webp?b=1&s=170667a&w=0&k=20&c=P1F7oPMJv56PaH4gZA8oXJ-Kb6S0NfkxTR8d75b5Ixw=");
     }
   </style>
-  
 
-
-
-    <template id="myTemplate">
-        <p>This is some templated content.</p>
-    </template>
+  <template id="myTemplate"> </template>
   <body>
-    <header class="MyHeader">
-      <h1 >Welcome to LearnEnglish Kids</h1>
-      <h3>To get started please register your child!</h3>
-    </header>
+    <!-- <h3>To get started please register your child!</h3> -->
     <div class="container">
+      <h1 style="color: rgba(11, 227, 65, 0.7)">
+        Welcome to LearnEnglish Kids
+      </h1>
       <h1 class="form-title">Registration</h1>
       <form action="#">
         <div class="main-user-info">
@@ -56,12 +51,21 @@
               type="email"
               id="email"
               name="email"
-              placeholder="Enter Email"required>
+              placeholder="Enter Email"
+              required
+            />
             />
           </div>
           <div class="user-input-box">
             <label for="phoneNumber">Phone Number</label>
-            <input type="text"id="phoneNumber"name="phoneNumber" pattern="[0-9]{10}" required>
+            <input
+              type="text"
+              id="phoneNumber"
+              name="phoneNumber"
+              pattern="[0-9]{10}"
+              placeholder="Enter phone Number"
+              required
+            />
           </div>
           <div class="user-input-box">
             <label for="password">Password</label>
@@ -69,7 +73,9 @@
               type="password"
               id="password"
               name="password"
-              placeholder="Enter Password"required>
+              placeholder="Enter Password"
+              required
+            />
             />
           </div>
           <div class="user-input-box">
@@ -95,8 +101,9 @@
         </div>
         <div>
           <button class="Sub-btn" type="submit" id="myBtn">Register</button>
-       </div>
+        </div>
       </form>
     </div>
+    <p id="demo"></p>
   </body>
 </html>
